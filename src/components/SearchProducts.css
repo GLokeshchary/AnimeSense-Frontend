@@ -1,0 +1,72 @@
+.next{
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 1519px;
+    max-height: 500px;
+    padding: 40px 50px;
+    z-index: 999;
+
+}
+.next .ppppp{
+    display: flex;
+    gap: 1200px;
+    align-items: center;
+}
+.ppppp button{
+    border: none;
+    background-color: white;
+}
+.next .head{
+    font-family: Poppins;
+    font-size: 15px;
+    height: 21px;
+    margin-bottom: 20px;
+}
+.next input{
+    height: 40px;
+    width: 1400px;
+    border: none;
+    outline: none;
+    font-family: Poppins;
+    
+}
+.next input:focus{
+    border-bottom: solid 2px #ea4949;
+}
+.searchp img{
+    height: 60px;
+}
+.searchp{
+    display: flex;
+    width: 400px;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+}
+.searchlist{
+    width: 1400px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 10px;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+.sdetails{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    padding: 5px;
+}
+.sdetails .pname{
+    font-family: Poppins;
+    font-weight: normal;
+}
+.sdetails .pprice{
+    font-family: Poppins;
+    font-weight: bold;
+}

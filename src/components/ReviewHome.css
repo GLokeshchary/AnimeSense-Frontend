@@ -1,0 +1,47 @@
+.review-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin:10px;
+}
+.review-header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.review-header span{
+    font-family: Poppins;
+    color: rgb(55, 51, 51);
+    font-size: 28px;
+
+}
+strong{
+    font-family: Poppins;
+}
+.review-container .review{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.allreviewscotainer{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.review img{
+    width: 112px;
+    height: 112px;
+}
+.review-details{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: Poppins;
+    font-size: 14px;
+}

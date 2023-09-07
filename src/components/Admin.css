@@ -1,0 +1,52 @@
+.totalConatiner{
+    width: 100%;
+    display: flex;
+
+}
+.totalConatiner .sidenavbar{
+    width: 250px;
+    height: 600px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    border-right: 2px solid rgb(210, 87, 87) ;
+}
+.totalConatiner .sidenavbar .navlinks{
+    width: 100%;
+}
+.totalConatiner .sidenavbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.adminname{
+    font-family: Poppins;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.adminname .small{
+    font-weight: normal;
+    font-size: 12px;
+}
+.totalConatiner .sidenavbar .navlinks .items-side{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: Poppins;
+}
+.navlinks .items-side .sidenavlink{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(210, 87, 87) ;
+}
+.navlinks .items-side .sidenavlink:hover{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(210, 87, 87);
+}

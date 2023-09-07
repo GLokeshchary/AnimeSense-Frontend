@@ -1,0 +1,68 @@
+.dropdown {
+    position: relative;
+    
+  }
+  .dropbtn {
+    font-family: onepiece;
+    font-size: 25px;
+    text-align: center;
+    background-color: inherit;
+    border: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background-color: #f5f5f5;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  .dropdown:hover .dropdown-content {display: flex;
+    width: 650px;
+    min-width: 180px;
+  gap: 10px;}
+
+  .dropdown-head{
+    color: rgb(232, 95, 95);
+    text-align: center;
+    font-weight: bold;
+}
+.dropdown-list li{
+    list-style: none;
+}
+.dropdown-list{
+  text-align: left;
+}
+
+.heading-image img{
+    height: 220px;
+    background-color: rgb(234, 67, 64);
+    object-fit: contain;
+}
+.dropdown-list li:hover{
+    list-style: square;
+    color: rgb(226, 88, 88);
+    cursor: pointer;
+    font-weight: 700;
+}
+li{
+  list-style: none;
+}
+li:hover{
+  list-style: square;
+  color: rgb(226, 88, 88);
+  cursor: pointer;
+  font-weight: 700;
+}
+.heading{
+  font-weight: 700;
+  color: rgb(232, 95, 95);
+}
+.animenamelist{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+

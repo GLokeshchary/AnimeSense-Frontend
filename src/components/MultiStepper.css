@@ -1,0 +1,101 @@
+.checkout-container{
+    display: flex;
+}
+.stepper{
+    width: 300px;
+}
+.stepper-container{
+    flex: 1;
+    padding: 40px;
+}
+.check-cart{
+    flex: 1;
+    background-color: #d6d0d0;;
+    height: auto;
+}
+.info-buttons{
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    
+}.info-buttons button{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    color: red;
+    background-color: white;
+    border: none;
+}
+.continue{
+    background-color: red !important;
+    color: white !important;
+    padding: 10px ;
+}
+.secondpart{
+    margin-top: 60px;
+}
+.c-container{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom:10px ;
+    padding-left: 70px;
+}
+.check-price{
+    font-family: Poppins;
+    align-content: center;
+    padding: 14px;
+    font-weight: bold;
+}
+.c-ig img{
+    width: 80px;
+    height: 100px;
+}
+.c-details{
+    font-family: Poppins;
+    width: 220px;
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    gap: 14px;
+    padding: 10px;
+}
+.c-details span{
+    font-weight: normal !important;
+}
+.downpart{
+    display: flex;
+    width: 500px;
+    height: auto;
+    margin-left: 20px;
+    padding-left: 40px;
+    flex-direction: column;
+}
+.downpart .csubtotal{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.csubtotal span{
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 14px;
+}
+.csubtotal .check{
+    font-weight: bold;
+}
+.inr{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.inr p{
+    
+    font-size: 12px;
+}
+.inr span{
+    font-size: 18px;
+    font-weight: bold;
+}

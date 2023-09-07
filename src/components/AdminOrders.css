@@ -1,0 +1,52 @@
+.adminorders-container{
+    width: 100%;
+    padding: 10px;
+    
+}
+.adminorders-container .ordersa-head{
+    display: flex;
+    font-family: Poppins;
+    align-items: center;
+    justify-content: space-between;
+}
+.orders-table{
+    width: 100%;
+    height: auto;
+}
+.orders-table table{
+    width: 1230px;
+    height: auto;
+    font-family: Poppins;
+    font-size: 14px;
+}
+.tabledata button{
+    background-color: rgb(237, 101, 101);
+    color: white;
+    font-family: Poppins;
+    border: none;
+}
+.modal-content{
+    font-family: Poppins;
+}
+.modal{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.modal button{
+    background-color: rgb(237, 101, 101);
+    color: white;
+    font-family: Poppins;
+    border: none;
+}
+.modal select{
+    width: 200px;
+    height: 50px;
+}
+.modal select option{
+    width: 200px;
+    height: 50px;
+}
+.orders-table table thead tr th{
+    background-color: rgb(246, 105, 105);
+}

@@ -1,0 +1,47 @@
+.w-container{
+    font-family: Poppins;
+    font-weight: bolder;
+    font-size: 30px;
+    
+}
+.whead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+.wishlist-items{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    gap: 23px;
+}
+.wishcancel{
+    top:10px;
+    left: 280px;
+}
+.wc button{
+    font-family: Poppins;
+    color: rgb(249, 107, 107);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 320px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.w-container .reset button{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    background-color: rgb(232, 95, 95);
+    color: white;
+    border: none;
+    width: 110px;
+    height: 30px;
+    margin: 10px;
+    font-family: Poppins;
+}

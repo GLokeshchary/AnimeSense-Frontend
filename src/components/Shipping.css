@@ -1,0 +1,43 @@
+.ship-cotainer{
+    font-family: Poppins;
+}
+.ship-contact{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #545454;
+    width: 600px;
+    height: auto;
+    padding: 10px;
+    
+}
+.shipc{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+.shiph{
+    width: 100px;
+}
+.informationship{
+    width: 350px;
+}
+.change{
+    color: rgb(240, 90, 90);
+    cursor: pointer;
+}
+.shimethod{
+    padding-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.method{
+    display: flex;
+    border: solid 1px #545454;
+    font-size: 14px;
+    align-items: center;
+    padding: 10px;
+    width: 600px;
+}

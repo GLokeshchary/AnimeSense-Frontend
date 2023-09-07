@@ -1,0 +1,36 @@
+.paymentdetails{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid rgb(243, 61, 61);
+}
+.paymentdetails div{
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: normal;
+}
+.paymentdetails div strong{
+    width: 220px;
+    text-align: left;
+}
+.paymentdetails span{
+    color: green;
+}
+.status span{
+    color: blue;
+}
+.b-but button{
+    margin-top: 25px;
+    width: 100%;
+    height: 35px;
+    background-color: rgb(232, 90, 90);
+    font-family: Poppins;
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+}

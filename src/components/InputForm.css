@@ -1,0 +1,25 @@
+.form-control{
+    display: flex;
+    align-items: center;
+    width: 800px;
+    font-family: Poppins;
+    gap: 10px;
+    margin: 10px;
+}
+.form-control label{
+    width: 150px;
+    color: #f21c1c;
+    text-align: right;
+}
+.fieldinput{
+    width: 400px;
+    height: 45px;
+    font-family: Poppins;
+    font-size: 15px;
+    border: none;
+    border: 3px solid #e7e1e1;
+    outline: none
+}
+.fieldinput:focus{
+    border-bottom: 3px solid #f26464;
+}

@@ -1,0 +1,90 @@
+.products{
+    display: flex;
+    margin-top: 25px;
+}
+.p-left{
+    flex: 1;
+    position: static;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    font-family: Poppins;
+    font-size: 13px;
+    padding: 10px;
+   margin-left: 10px;
+}
+.p-right{
+    flex:3;
+    overflow-y: scroll;
+    height: 100vh;
+    padding: 20px
+}
+.categoyImg{
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+.filter-items h2{
+    font-size: 15px;
+    font-weight: 600;
+}
+.inputItem span{
+    font-weight: normal;
+}
+.inputItem input,label{
+    font-size: 15px;
+}
+.cat-header{
+    margin-top:20px;
+    font-family: Poppins;
+    font-weight: bold;
+    padding: 3px;
+    height: 40px;
+}
+.category-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px;
+}
+.category-buttons button{
+    background-color: white;
+    width: auto;
+    height: 25px;
+    text-align: center;
+    font-family: Poppins;
+    border: none;
+}
+.category-buttons button:hover{
+    background-color: rgb(236, 70, 70);
+    color: white;
+}
+.category-buttons button:focus{
+    background-color: rgb(236, 70, 70);
+    color: white;
+}
+.filter-items .chips{
+    font-family: Poppins;
+    color: grey;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 6px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+}
+.chips:focus{
+    background:#e14d48!important ;
+    color: white;
+}
+.clear button{
+    margin-top: 22px;
+    height: 35px;
+    background-color: #e14d48;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: Poppins;
+    width: 100%;
+}

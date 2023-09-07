@@ -1,0 +1,18 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://wallpapers.com/images/hd/luffy-d-monkey-manga-pr51kcyyk509rjx2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    overflow: hidden;
+}
+.form{
+    font-family: Poppins;
+    
+    border-radius: 10px;
+}
+::-webkit-scrollbar {
+    display: none;
+}

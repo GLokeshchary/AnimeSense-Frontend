@@ -1,0 +1,22 @@
+.eshop{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: rgb(241, 101, 101);
+    justify-content: center;
+    font-family: Poppins;
+    cursor: pointer;
+
+}
+.ecart{
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ecart img{
+    height: 200px;
+    mix-blend-mode: multiply;
+    
+}

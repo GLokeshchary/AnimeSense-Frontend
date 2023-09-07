@@ -1,0 +1,13 @@
+.radio{
+    display: flex;
+    align-items: center;
+    width: 800px;
+    font-family: Poppins;
+    gap: 10px;
+    margin: 10px;
+    margin-left: 65px;
+}
+.radio label{
+    color: #f21c1c;
+    text-align: right;
+}

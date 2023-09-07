@@ -1,0 +1,65 @@
+.total-container{
+    width: 100%;
+}
+.oooooo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.order-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(211, 221, 221);
+    border: 2px solid red;
+}
+.order-container .left{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    
+}
+.order-container .left .left-items{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.left-items span{
+    font-weight: normal;
+    width: 200px;
+    text-align: right;
+}
+.order-container .righ{
+    width: 100%;
+    height: auto;
+    
+    padding: 10px;
+}
+.order-container .righ img{
+    width: 112px;
+    height: 112px;
+}
+.order-container .righ .image-continaer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.image0{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+.image0 .pd{
+    display: flex;
+    flex-direction: column;
+}
+.pd span{
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 14px;
+}

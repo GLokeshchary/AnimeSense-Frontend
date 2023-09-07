@@ -1,0 +1,36 @@
+.control {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.control button{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(243, 92, 92);
+    border: none;
+    color: white;
+    padding: 5px;
+    font-family: Poppins;
+}
+.control button:disabled{
+    opacity: 0.5;
+}
+.saddress{
+    font-family: Poppins;
+}
+.saddress p{
+    font-weight: bold;
+    color: rgb(251, 70, 70);
+}
+.c-continue{
+    width: 100%;
+}
+.c-continue button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: rgb(234, 77, 77);
+    color: white;
+    font-family: Poppins;
+    font-weight: bold ;
+}

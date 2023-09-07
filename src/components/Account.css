@@ -1,0 +1,29 @@
+.account-cotainer{
+    font-family: Poppins;
+    display: flex;
+    width: 1400px;
+    flex-direction: column;
+    padding: 40px;
+    gap: 10px;
+}
+.buttoncontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.account-cotainer .buttoncontainer button{
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    border: none;
+    font-family: Poppins;
+    background-color: rgb(214, 207, 207);
+    color: rgb(58, 52, 52);
+    font-weight: bold;
+    border-radius: 10%;
+    border-left: 3px solid rgb(240, 93, 93);
+    border-bottom: 3px solid rgb(244, 11, 11);
+}
+.account-cotainer .buttoncontainer button:focus{
+    background-color: rgb(245, 108, 108);
+    color: white;
+}

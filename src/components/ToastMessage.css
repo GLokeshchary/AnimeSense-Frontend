@@ -1,0 +1,11 @@
+.toastwish{
+    display: flex;
+    flex-direction: column;
+}
+.toastwish span{
+    font-family: Poppins;
+}
+.toastwish img{
+    width: inherit;
+    height: 150px;
+}

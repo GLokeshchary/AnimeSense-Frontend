@@ -1,0 +1,123 @@
+.cart-container{
+    width: 100%;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+table{
+    border: none;
+    width: 1500px;
+    height: 200px;
+    border-bottom: 1px solid #f5f5f5;
+}
+th{
+    background-color: #f5f5f5;
+}
+ .pp-product .details{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bold;
+}
+.pp-product img{
+    width: 125px;
+    height: 125px;
+}
+.pp-product{
+    display: flex;
+    gap: 10px;
+}
+.cartpdetails{
+    justify-content: center;
+    align-items:center ;
+}
+td {
+    text-align: center;
+}
+.deleteicon{
+    border: none;
+    
+}
+.deleteicon:hover{
+    color: red;
+    cursor: pointer;
+}
+.pquantity button{
+    margin: 5px;
+    padding:8px 10px !important;
+}
+.other{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cshop{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: rgb(241, 101, 101);
+}
+
+.cart-container .reset button{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    background-color: rgb(232, 95, 95);
+    color: white;
+    border: none;
+    width: 110px;
+    height: 30px;
+    font-family: Poppins;
+}
+.subtotal{
+    display: flex;
+    gap: 25px;
+}
+.subtotal .special{
+    display: flex;
+    width: 930px;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5f5f5;
+    padding: 25px;
+}
+.sub{
+   
+    width: 450px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+.ssub{
+    display: flex;
+    justify-content: space-between;
+}
+.ssub span{
+    font-weight: normal;
+    font-size: 13px;
+}
+.emptycart{
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 200px;
+}
+.carthead{
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.proceed{
+    margin-top: 10px;
+    font-family: Poppins;
+    width: inherit;
+    height: 30px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    background-color: black;
+}

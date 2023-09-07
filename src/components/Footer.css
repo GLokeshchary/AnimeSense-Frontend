@@ -1,0 +1,40 @@
+.foot-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(198, 188, 176);
+    padding: 25px;
+    
+}
+.foot-top{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Poppins;
+    font-size: 15px;
+}
+.l-header{
+    color: red;
+    -webkit-text-stroke: 0.5px rgb(234, 225, 225);
+    font-weight: 550;
+}
+.social-icons{
+    display: flex;
+    gap: 30px;
+}
+.el-link div:hover{
+    cursor: pointer;
+    font-weight: 900;
+    border-bottom: solid 2px rgb(232, 84, 84);
+}
+span{
+    font-weight: 900;
+}
+.foot-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 15px;
+}
+.paytmm img{
+    height: 50px;
+}

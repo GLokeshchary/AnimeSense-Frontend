@@ -1,0 +1,12 @@
+.cus-continer{
+    padding: 10px;
+    font-family: Poppins;
+}
+.customerstable table{
+    width: 1200px;
+    font-family: Poppins;
+    font-size: 14px;
+}
+.customerstable table thead tr th{
+    background-color: rgb(237, 105, 105);
+}

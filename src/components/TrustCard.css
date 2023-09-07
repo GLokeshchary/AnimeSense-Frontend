@@ -1,0 +1,19 @@
+.trust{
+    background-color: #ff312a;
+    display: flex;
+    font-family: Poppins;
+    justify-content: space-around;
+    height: 130px;
+    align-items: center;
+    color: white;
+}
+.t-left{
+    display: flex;
+    gap: 15px;
+}
+.t-icon{
+    height: 30px;
+}
+.Header-t{
+    font-weight: 600;
+}

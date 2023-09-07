@@ -1,0 +1,33 @@
+.demand-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    font-family: Poppins;
+    width: 100%;
+    align-items: center;
+    font-weight: bold;
+}
+.header{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.image-wrapper{
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+}
+.imgcircle img{
+    height: 300px;
+    border-radius: 50%;
+}
+.imgcircle img:hover{
+    height: 307px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border:solid 5px rgb(232, 71, 50)
+}
+.imgcircle{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.signuppage-container{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: url("https://wallpapers.com/images/hd/luffy-d-monkey-manga-pr51kcyyk509rjx2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
+.right{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+.welcometext{
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    font-weight: bolder;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: rgb(250, 249, 246);
+}
+h3{
+    color: rgb(236, 75, 75);
+    font-size: 20px;
+}
+.heading2{
+    color: rgb(49, 15, 15);
+    font-size: 25px;
+}

@@ -1,0 +1,146 @@
+.ss-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.singleproduct{
+    display: flex;
+    gap: 20px;
+    
+}
+.sp-left{
+    position: sticky;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+.sp-images{
+    display: flex;
+    margin-left: 10px;
+   
+    gap: 10px;
+    flex-direction: column;
+}
+.sp-images img{
+    height: 100px;
+    cursor: pointer;
+    object-fit: contain;
+}
+.sp-mainImg img{
+    width: 615px;
+    max-height: 700px;
+    object-fit: contain;
+}
+
+.sp-right{
+    flex: 1;
+   
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    gap: 20px;
+}
+.sp-right .sp-header{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+.ratingcol{
+    display: flex;
+    gap: 10px;
+}
+.sp-price{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.sp-price .price1{
+    font-size: 22px;
+}
+.sp-price .price2{
+    font-size: 15px;
+    color: rgb(228, 68, 68);
+    text-decoration: line-through red;
+    font-weight: normal;
+}
+.discount{
+    font-size: 15px;
+    font-weight: normal;
+    color: grey;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-size: large;
+}
+.quantity .bq{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none
+}
+.addcbutton{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.accordians{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sp-size{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sizelist{
+    display: flex;
+    gap: 10px;
+}
+.sizebutton{
+    color: gray;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.sizebutton:focus{
+    color: white;
+    background-color: rgb(215, 62, 62);
+
+}
+.sizebutton:active{
+    color: white;
+    background-color: rgb(215, 62, 62);
+
+}
+.qheader{
+    font-size: 15px;
+    font-weight: normal;
+}
+button{
+    cursor: pointer;
+}
+.glowingbutton{
+    animation: glowing 700ms infinite alternate ease-in-out;
+}
+@keyframes glowing {
+    0% {
+      background-color: #df4f23;
+      box-shadow: 0 0 5px #ec9f10;
+    }
+    50% {
+      background-color: #f0450c;
+      box-shadow: 0 0 20px #e89919;
+    }
+    100% {
+      background-color: #df2b2b;
+      box-shadow: 0 0 5px #a83305;
+    }
+  }
