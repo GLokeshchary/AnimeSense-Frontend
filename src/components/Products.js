@@ -55,7 +55,10 @@ function Products() {
     }
 
     axios
-      .get("http://localhost:8080/product/category/" + name)
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/product/category/" +
+          name
+      )
       .then((response) => {
         setproducts(response.data);
         setloading(false);

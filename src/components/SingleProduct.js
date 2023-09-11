@@ -67,10 +67,15 @@ function SingleProduct() {
         setLoading(false);
       })
       .catch((error) => console.log(error));
-    axios.get("http://localhost:8080/reviews/" + productId).then((response) => {
-      setreviews(response.data);
-      setLoading(false);
-    });
+    axios
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/reviews/" +
+          productId
+      )
+      .then((response) => {
+        setreviews(response.data);
+        setLoading(false);
+      });
   }, [productId]);
   document.title = Product.productName;
   const handleChange = (panel) => (event, isExpanded) => {

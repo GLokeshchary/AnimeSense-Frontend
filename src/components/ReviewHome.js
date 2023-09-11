@@ -36,7 +36,12 @@ function ReviewHome() {
             <img src={review.reviewProductImage} />
             <div className="review-details">
               <div className="r-rting">
-                <Rating value={review.rating} size="small" color="error" />
+                <Rating
+                  value={review.rating}
+                  size="small"
+                  color="error"
+                  readOnly
+                />
               </div>
               <strong>{review.reviewTitle}</strong>
               <div className="comment">
