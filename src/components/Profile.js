@@ -37,7 +37,10 @@ function Profile() {
   document.title = "Profile";
   const fetchUserById = () => {
     axios
-      .get("http://localhost:8080/auth/user/" + user.userId)
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/auth/user/" +
+          user.userId
+      )
       .then((response) => {
         setbuser(response.data);
         setloading(false);

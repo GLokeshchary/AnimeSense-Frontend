@@ -17,11 +17,15 @@ function Orders() {
   document.title = "Orders";
   useEffect(() => {
     axios
-      .get("http://localhost:8080/orders/all/" + user.userId, {
-        headers: {
-          Authorization: "Bearer " + user.jwtToken,
-        },
-      })
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/orders/all/" +
+          user.userId,
+        {
+          headers: {
+            Authorization: "Bearer " + user.jwtToken,
+          },
+        }
+      )
       .then((response) => {
         console.log(response.data);
         const filterorders = response.data

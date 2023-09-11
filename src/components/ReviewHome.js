@@ -15,7 +15,7 @@ function ReviewHome() {
   const paginatedReviews = reviews.slice(startIndex, endIndex);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/reviews/all")
+      .get("https://anime-sense-backend-production.up.railway.app/reviews/all")
       .then((response) => {
         setreviewLength(response.data.length);
         setreviews(response.data);

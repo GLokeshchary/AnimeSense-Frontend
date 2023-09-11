@@ -11,10 +11,9 @@ function SearchProducts() {
   const [open, setOpen] = useState(false);
   const [searchvalue, setsearchvalue] = useState("");
   const [products, setproducts] = useState([]);
-  const [filteredproducts, setfilteredproducts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/product/all")
+      .get("https://anime-sense-backend-production.up.railway.app/product/all")
       .then((response) => setproducts(response.data))
       .catch((error) => console.log(error));
   }, []);

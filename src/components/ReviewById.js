@@ -28,7 +28,10 @@ function ReviewById({ productId }) {
   const [loading, setLoading] = useState(true);
   const fetchReviews = () => {
     axios
-      .get("http://localhost:8080/reviews/" + productId)
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/reviews/" +
+          productId
+      )
       .then((response) => {
         if (response.data === null) {
           setreviews(null);

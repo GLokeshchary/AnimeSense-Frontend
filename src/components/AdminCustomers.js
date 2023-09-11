@@ -7,10 +7,12 @@ function AdminCustomers() {
   const [users, setusers] = useState([]);
   document.title = "Admin/Customers";
   const fetchAllUsers = () => {
-    axios.get("http://localhost:8080/auth/all").then((response) => {
-      setusers(response.data);
-      setloading(false);
-    });
+    axios
+      .get("https://anime-sense-backend-production.up.railway.app/auth/all")
+      .then((response) => {
+        setusers(response.data);
+        setloading(false);
+      });
   };
   useEffect(() => {
     fetchAllUsers();

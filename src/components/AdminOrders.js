@@ -16,7 +16,7 @@ function AdminOrders() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.user);
-  const handleOpen = () => setOpen(true);
+  // const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const shipping = "Shipping";
   const Delivered = "Delivered";
@@ -38,11 +38,14 @@ function AdminOrders() {
   };
   const fetchOrders = () => {
     axios
-      .get("http://localhost:8080/orders/allOrders", {
-        headers: {
-          Authorization: "Bearer " + user.jwtToken,
-        },
-      })
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/orders/allOrders",
+        {
+          headers: {
+            Authorization: "Bearer " + user.jwtToken,
+          },
+        }
+      )
       .then((response) => {
         const filterorders = response.data
           .slice()
@@ -75,11 +78,16 @@ function AdminOrders() {
   }, [user.userId]);
   const updateStatus = () => {
     axios
-      .post("http://localhost:8080/orders/status/" + orderID, selectedValue, {
-        headers: {
-          Authorization: "Bearer " + user.jwtToken,
-        },
-      })
+      .post(
+        "https://anime-sense-backend-production.up.railway.app/orders/status/" +
+          orderID,
+        selectedValue,
+        {
+          headers: {
+            Authorization: "Bearer " + user.jwtToken,
+          },
+        }
+      )
       .then((response) => {
         if (response.data === "Status Updated") {
           Swal.fire({

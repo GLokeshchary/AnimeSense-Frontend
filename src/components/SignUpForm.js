@@ -61,7 +61,10 @@ function SignUpForm() {
       reEnterPassword: values.reEnterPassword,
     };
     axios
-      .post("http://localhost:8080/auth/register", RegisterRequest)
+      .post(
+        "https://anime-sense-backend-production.up.railway.app/auth/register",
+        RegisterRequest
+      )
       .then((response) => {
         console.log(response.data);
         if (response.data === "Email already exists in DB") {

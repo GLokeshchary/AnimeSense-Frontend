@@ -54,7 +54,7 @@ function Payment({ order, buynow }) {
     }
     Swal.fire({
       title: "Arigato!!",
-      text: "Thank You For Ordering !! Email hase been Sent,Check Inbox",
+      text: "Thank You For Ordering !! Email has been Sent,Check Inbox",
       imageUrl:
         "https://pa1.aminoapps.com/6553/63a02555001a66b3f39dbc978fb1ee3867a794ef_00.gif",
       imageWidth: 400,

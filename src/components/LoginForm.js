@@ -39,7 +39,10 @@ function LoginForm() {
       password: values.password,
     };
     axios
-      .post("http://localhost:8080/auth/authenticate", authRequest)
+      .post(
+        "https://anime-sense-backend-production.up.railway.app/auth/authenticate",
+        authRequest
+      )
       .then((response) => {
         if (
           response.data.loginMessage === "Logged In Successfully" &&

@@ -58,7 +58,10 @@ function SingleProduct() {
   const wishtrue = wishlistItems.find((item) => item.id === Product.productId);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/product/" + productId)
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/product/" +
+          productId
+      )
       .then((response) => {
         setProduct(response.data);
         setLoading(false);

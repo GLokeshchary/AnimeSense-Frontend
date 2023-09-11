@@ -114,15 +114,19 @@ function AddProduct() {
   const user = useSelector((state) => state.user.user) || {};
   document.title = "Admin/SaveProduct";
   const userId = user.userId;
-  const token = user.jwtToken;
+  // const token = user.jwtToken;
   const onSubmit = (values, formikHelpers) => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+    // const config = {
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    // };
     axios
-      .post("http://localhost:8080/product/save/" + userId, values)
+      .post(
+        "https://anime-sense-backend-production.up.railway.app/product/save/" +
+          userId,
+        values
+      )
       .then((response) => {
         if (response.data.message === "Product Has Been Saved in DB") {
           ToastMessage({ type: "success", message: "Successfully Added" });

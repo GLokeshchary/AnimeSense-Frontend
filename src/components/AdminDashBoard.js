@@ -18,11 +18,15 @@ function AdminDashBoard() {
   const user = useSelector((state) => state.user.user) || {};
   const fetchOrders = () => {
     axios
-      .get("http://localhost:8080/orders/all/" + user.userId, {
-        headers: {
-          Authorization: "Bearer " + user.jwtToken,
-        },
-      })
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/orders/all/" +
+          user.userId,
+        {
+          headers: {
+            Authorization: "Bearer " + user.jwtToken,
+          },
+        }
+      )
       .then((response) => {
         const filterorders = response.data
           .slice()
@@ -46,11 +50,14 @@ function AdminDashBoard() {
   };
   const fetchOrdersByDate = () => {
     axios
-      .get("http://localhost:8080/orders/chart", {
-        headers: {
-          Authorization: "Bearer " + user.jwtToken,
-        },
-      })
+      .get(
+        "https://anime-sense-backend-production.up.railway.app/orders/chart",
+        {
+          headers: {
+            Authorization: "Bearer " + user.jwtToken,
+          },
+        }
+      )
       .then((response) => {
         setdata(response.data);
         setloading(false);
@@ -70,10 +77,12 @@ function AdminDashBoard() {
       });
   };
   const fetchAllUsers = () => {
-    axios.get("http://localhost:8080/auth/all").then((response) => {
-      setusers(response.data);
-      setloading(false);
-    });
+    axios
+      .get("https://anime-sense-backend-production.up.railway.app/auth/all")
+      .then((response) => {
+        setusers(response.data);
+        setloading(false);
+      });
   };
   useEffect(() => {
     fetchAllUsers();
@@ -82,7 +91,7 @@ function AdminDashBoard() {
     const intervalId = setInterval(() => {
       fetchOrders();
       fetchOrdersByDate();
-    }, 5000);
+    }, 6000);
     return () => clearInterval(intervalId);
   }, [user.userId]);
 

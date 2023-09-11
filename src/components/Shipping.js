@@ -68,7 +68,8 @@ function Shipping() {
         };
         axios
           .post(
-            "http://localhost:8080/orders/create/" + user.userId,
+            "https://anime-sense-backend-production.up.railway.app/orders/create/" +
+              user.userId,
             orderrequest,
             {
               headers: {

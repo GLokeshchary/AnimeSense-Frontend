@@ -12,7 +12,6 @@ import {
   animedropdownNames,
   categorydropdown,
   genderOptions,
-  isNewOptions,
   productColorList,
   productSpecificationList,
   stockOptions,
@@ -65,13 +64,15 @@ function AdminProducts() {
   const endIndex = startIndex + itemsPerPage;
   const paginatedProducts = products.slice(startIndex, endIndex);
   const fetchAllProducts = () => {
-    axios.get("http://localhost:8080/product/all").then((response) => {
-      const filterproductsbytime = response.data
-        .slice()
-        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      setproducts(filterproductsbytime);
-      setloading(false);
-    });
+    axios
+      .get("https://anime-sense-backend-production.up.railway.app/product/all")
+      .then((response) => {
+        const filterproductsbytime = response.data
+          .slice()
+          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setproducts(filterproductsbytime);
+        setloading(false);
+      });
   };
   useEffect(() => {
     fetchAllProducts();

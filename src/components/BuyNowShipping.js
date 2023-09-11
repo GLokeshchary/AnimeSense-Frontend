@@ -59,14 +59,15 @@ function BuyNowShipping() {
           amountPaid: true,
           cartItems: cartItems,
         };
-        const config = {
-          headers: {
-            Authorization: `Bearer ${user.jwtToken}`,
-          },
-        };
+        // const config = {
+        //   headers: {
+        //     Authorization: `Bearer ${user.jwtToken}`,
+        //   },
+        // };
         axios
           .post(
-            "http://localhost:8080/orders/create/" + user.userId,
+            "https://anime-sense-backend-production.up.railway.app/orders/create/" +
+              user.userId,
             orderrequest,
             {
               headers: {

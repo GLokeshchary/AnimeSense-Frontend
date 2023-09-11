@@ -43,7 +43,10 @@ function Products() {
   useEffect(() => {
     if (isAnime) {
       axios
-        .get("http://localhost:8080/product/anime/" + name)
+        .get(
+          "https://anime-sense-backend-production.up.railway.app/product/anime/" +
+            name
+        )
         .then((response) => {
           setproducts(response.data);
           setloading(false);
