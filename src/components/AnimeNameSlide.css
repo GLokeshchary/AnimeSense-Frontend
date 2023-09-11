@@ -10,6 +10,9 @@
 .animename{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    height: auto;
     gap: 20px;
 }
 .anime-logo img{
@@ -22,7 +25,7 @@
     animation: glowing 700ms infinite alternate ease-in-out;;
 }
 .anime-logo img{
-    height: 200px;
+    height: 180px;
 }
 @keyframes glowing {
     0% {
