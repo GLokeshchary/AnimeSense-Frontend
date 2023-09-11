@@ -6,6 +6,7 @@
 }
 .subcomponent{
     flex: 1;
+    padding: 20px;
     justify-content: center;
     align-items: center;
 }
@@ -40,7 +41,7 @@
     gap: 30px;
     margin-top: 20px;
     margin-bottom:10px ;
-    padding-left: 70px;
+    padding-left: 40px;
 }
 .check-price{
     font-family: Poppins;
@@ -69,7 +70,7 @@
     width: 500px;
     height: auto;
     margin-left: 20px;
-    padding-left: 40px;
+    padding-left: 20px;
     flex-direction: column;
 }
 .downpart .csubtotal{

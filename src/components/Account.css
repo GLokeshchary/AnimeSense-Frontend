@@ -4,12 +4,14 @@
     width: 100%;
     height: auto;
     flex-direction: column;
-    padding: 40px;
     gap: 10px;
+}
+.account-cotainer h1{
+    margin-left: 10px;
 }
 .buttoncontainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .account-cotainer .buttoncontainer button{
     width: 200px;
