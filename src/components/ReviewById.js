@@ -58,7 +58,11 @@ function ReviewById({ productId }) {
     console.log(values);
     setLoading(true);
     axios
-      .post("http://localhost:8080/reviews/save/" + productId, values)
+      .post(
+        "https://anime-sense-backend-production.up.railway.app/reviews/save/" +
+          productId,
+        values
+      )
       .then((response) => {
         if (response.data.includes("Successfully")) {
           setLoading(false);
