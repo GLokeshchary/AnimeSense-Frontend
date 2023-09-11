@@ -6,7 +6,6 @@
 }
 .subcomponent{
     flex: 1;
-    padding: 40px;
     justify-content: center;
     align-items: center;
 }
