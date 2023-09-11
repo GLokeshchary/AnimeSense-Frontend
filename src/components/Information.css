@@ -10,7 +10,6 @@
     display: flex;
     width: 400px;
     gap: 10px;
-    
     padding: 10px;
 }
 .infodetails{
@@ -35,9 +34,9 @@
     font-weight: normal;
 }
 .conatct{
-    padding-left: 40px;
+    padding-left: 20px;
 }
 .shipping{
-    margin-top: 30px;
-    padding-left:40px;
+    margin-top: 25px;
+    padding-left:20px;
 }
