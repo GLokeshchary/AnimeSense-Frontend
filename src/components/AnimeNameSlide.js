@@ -59,10 +59,7 @@ function AnimeNameSlide() {
         {animename.map((item, id) => (
           <Link to={"/products/" + item.animeName} key={id}>
             <div className="anime-logo">
-              <img
-                src={item.animelogo}
-                alt="https://i.pinimg.com/1200x/43/a6/75/43a675445e2496fa7f3fe9e6a1b88724.jpg"
-              />
+              <img src={item.animelogo} alt={id} />
             </div>
           </Link>
         ))}
