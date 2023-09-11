@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const animename = [
   {
     animeName: "One Piece",
-    animelogo: "https://wallpaperaccess.com/full/397916.jpg",
+    animelogo:
+      "https://i.pinimg.com/1200x/43/a6/75/43a675445e2496fa7f3fe9e6a1b88724.jpg",
     image:
       "https://p7.hiclipart.com/preview/711/347/686/roronoa-zoro-zorro-one-piece-anime-one-piece.jpg",
   },
