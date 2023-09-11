@@ -1,7 +1,8 @@
 .account-cotainer{
     font-family: Poppins;
     display: flex;
-    width: 1400px;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     padding: 40px;
     gap: 10px;
