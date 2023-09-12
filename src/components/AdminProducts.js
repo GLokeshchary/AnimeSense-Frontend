@@ -106,7 +106,8 @@ function AdminProducts() {
     setopen(false);
     axios
       .post(
-        "http://localhost:8080/product/update/" + modalproduct.productId,
+        "https://anime-sense-backend-production.up.railway.app/product/update/" +
+          modalproduct.productId,
         values
       )
       .then((response) => {
