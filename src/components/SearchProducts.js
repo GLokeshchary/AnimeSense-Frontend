@@ -30,7 +30,7 @@ function SearchProducts() {
       product.productCategory.toLowerCase() === searchvalue.toLowerCase() ||
       product.animeName.toLowerCase() === searchvalue.toLowerCase()
   );
-  if (filteredP.length === 0) {
+  if (loading) {
     return <Loading />;
   }
   return (
@@ -46,7 +46,7 @@ function SearchProducts() {
               <CancelIcon />
             </button>
           </div>
-          <div>
+          <div className="searchimput">
             <input
               type="text"
               value={searchvalue}

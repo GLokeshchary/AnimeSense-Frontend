@@ -14,7 +14,7 @@
 }
 .next .ppppp{
     display: flex;
-    gap: 1200px;
+    gap: 70%;
     align-items: center;
 }
 .ppppp button{
@@ -29,7 +29,7 @@
 }
 .next input{
     height: 40px;
-    width: 1400px;
+    width: 80%;
     border: none;
     outline: none;
     font-family: Poppins;
@@ -72,4 +72,7 @@
 .sdetails .pprice{
     font-family: Poppins;
     font-weight: bold;
+}
+.searchimput{
+    display: flex;
 }
