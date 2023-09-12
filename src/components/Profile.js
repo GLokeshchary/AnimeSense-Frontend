@@ -72,7 +72,11 @@ function Profile() {
   const onSubmit = (values) => {
     console.log(values);
     axios
-      .post("http://localhost:8080/auth/updateUser/" + user.userId, values)
+      .post(
+        "https://anime-sense-backend-production.up.railway.app/auth/updateUser/" +
+          user.userId,
+        values
+      )
       .then((response) => {
         Swal.fire({
           title: "Successfully Updated",
