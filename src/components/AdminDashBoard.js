@@ -19,8 +19,7 @@ function AdminDashBoard() {
   const fetchOrders = () => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/orders/all/" +
-          user.userId,
+        "https://anime-sense-backend-production.up.railway.app/orders/allOrders",
         {
           headers: {
             Authorization: "Bearer " + user.jwtToken,
