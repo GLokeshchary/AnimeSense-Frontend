@@ -6,15 +6,20 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import Modal from "@mui/material/Modal";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 function SearchProducts() {
   const [open, setOpen] = useState(false);
+  const [loading, setloading] = useState(true);
   const [searchvalue, setsearchvalue] = useState("");
   const [products, setproducts] = useState([]);
   useEffect(() => {
     axios
       .get("https://anime-sense-backend-production.up.railway.app/product/all")
-      .then((response) => setproducts(response.data))
+      .then((response) => {
+        setproducts(response.data);
+        setloading(false);
+      })
       .catch((error) => console.log(error));
   }, []);
   const handleOpen = () => setOpen(true);
@@ -25,6 +30,9 @@ function SearchProducts() {
       product.productCategory.toLowerCase() === searchvalue.toLowerCase() ||
       product.animeName.toLowerCase() === searchvalue.toLowerCase()
   );
+  if (filteredP.length === 0) {
+    return <Loading />;
+  }
   return (
     <div className="search-contaier">
       <div onClick={handleOpen}>

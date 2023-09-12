@@ -1,9 +1,12 @@
+.search-contaier{
+    width: 100%;
+}
 .next{
     position: absolute;
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 1519px;
+    width: 100%;
     max-height: 500px;
     padding: 40px 50px;
     z-index: 999;
