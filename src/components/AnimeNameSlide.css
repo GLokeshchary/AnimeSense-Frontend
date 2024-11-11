@@ -1,44 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
-.name-wrapper{
-    display: flex;
-    flex-direction: column;
-    font-family: Poppins;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    font-weight: bold;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  width: 100%;
+  align-items: center;
+  font-weight: bold;
 }
-.animename{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
-    height: auto;
-    gap: 20px;
+.name-wrapper.header {
+  font-size: 40px;
+  text-align: center;
+  font-weight: normal;
+  font-family: "Dancing Script", cursive !important;
 }
-.anime-logo img{
-    border-radius: 20px;
+.name-wrapper img{
+  width: 100%;
+    object-fit: cover;
 }
-.anime-logo img:hover{
-    height: 206px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    animation: glowing 700ms infinite alternate ease-in-out;;
-}
-.anime-logo img{
-    height: 180px;
-}
-@keyframes glowing {
-    0% {
-      background-color: #df4f23;
-      box-shadow: 0 0 25px #ec9f10;
-    }
-    50% {
-      background-color: #f00c0c;
-      box-shadow: 0 0 25px #f10707;
-    }
-    100% {
-      background-color: #ff0303;
-      box-shadow: 0 0 25px #ee1212;
-    }
-  }

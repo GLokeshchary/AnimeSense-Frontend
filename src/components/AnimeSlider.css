@@ -1,0 +1,25 @@
+.animeimage {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+    .animeimage {
+        height: 300px; /* Set a standard height for desktop view */
+    }
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .animeimage {
+        height: 200px; /* Reduce height for smaller screens */
+    }
+}
+
+/* For extra small screens, like mobile devices */
+@media (max-width: 480px) {
+    .animeimage {
+        height: 150px; /* Further reduce height for very small screens */
+    }
+}

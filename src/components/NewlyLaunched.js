@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import Card from "../components/Card";
 import Loading from "./Loading";
 import { URI } from "../apis/apicalls";
+import { getSlidesPerView } from "./Utils";
 function NewlyLaunched(props) {
   const [products, setproducts] = useState(null);
   const [loading, setloading] = useState(true);
@@ -19,6 +20,7 @@ function NewlyLaunched(props) {
 
   const token = user.jwtToken;
   const { name, limit, similar, ProductName } = props;
+  let slidesperviewself=getSlidesPerView(4,2);
   useEffect(() => {
     axios.get(URI + "/product/all").then((response) => {
       if (name === "TRENDING") {
@@ -52,6 +54,7 @@ function NewlyLaunched(props) {
   if (loading) {
     return <Loading />;
   }
+  
   return (
     <div className="newlauch">
       <div className="header">
@@ -59,7 +62,7 @@ function NewlyLaunched(props) {
       </div>
       <div className="newswiper">
         <Swiper
-          slidesPerView={4}
+          slidesPerView={slidesperviewself}
           spaceBetween={30}
           autoplay={{
             delay: 3000,

@@ -1,33 +1,76 @@
 .demand-wrapper{
     display: flex;
+    margin-top: 20px;
     flex-direction: column;
-    height: 450px;
+    height: auto;
     font-family: Poppins;
     width: 100%;
     align-items: center;
     font-weight: bold;
 }
-.header{
-    font-size: 50px;
-    font-weight: bolder;
-}
+.header {
+    font-size: 40px;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Dancing Script", cursive !important;
+  }
 .image-wrapper{
+    margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 35px;
 }
 .imgcircle img{
-    height: 300px;
+    height: 200px;
     border-radius: 50%;
 }
 .imgcircle img:hover{
-    height: 307px;
+    height: 207px;
     cursor: pointer;
     transition: 0.3s ease;
-    border:solid 5px rgb(232, 71, 50)
+    border:solid 5px rgb(195, 86, 72)
 }
 .imgcircle{
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+}
+@media (max-width: 768px) {
+    .header {
+        font-size: 28px;
+    }
+
+    .image-wrapper {
+        gap: 25px;
+    }
+
+    .imgcircle img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .imgcircle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .image-wrapper {
+        gap: 15px;
+    }
+
+    .imgcircle img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .imgcircle {
+        font-size: 16px;
+    }
 }
