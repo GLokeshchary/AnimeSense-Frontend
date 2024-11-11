@@ -1,47 +1,61 @@
-.review-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin:10px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+.review-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
-.review-header{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
+.review-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
-.review-header span{
-    font-family: Poppins;
-    color: rgb(55, 51, 51);
-    font-size: 28px;
-
+.review-header span {
+  font-family: "Dancing Script", cursive !important;
+  font-size: 40px;
 }
-strong{
-    font-family: Poppins;
+strong {
+  font-size: 20px;
+  font-family: "Dancing Script", cursive !important;
 }
-.review-container .review{
-    width: 400px;
-    height: 200px;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
+.review-container .review {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
 }
-.allreviewscotainer{
-    width: 100%;
-    display: flex;
-    overflow: hidden;
+.allreviewscotainer {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
 }
-.review img{
-    width: 112px;
-    height: 112px;
+.review img {
+  width: 112px;
+  height: 112px;
 }
-.review-details{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: Poppins;
-    font-size: 14px;
+.review-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: Poppins;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .review-header span {
+    font-size: 30px;
+  }
+  strong {
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+    .review-header span {
+        font-size: 30px;
+      }
+      strong {
+        font-size: 20px;
+      }
 }

@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
 .wrapper{
     width: 500px;
     height: auto;
+    padding: 30px 30px;
     border-radius: 30px;
     background-color: floralwhite;
 }
@@ -9,17 +12,13 @@
     flex-direction: column;
     align-items: center;
 }
-.remeber .text{
-    color: black !important;
-    font-family: Poppins;
-    border-bottom: none;
-}
-.remember-me{
-    display: flex;
-    justify-content: space-between;
+.form-wrapper h2{
+    margin-bottom: 20px;
+    font-family: "Dancing Script", cursive !important;
 }
 .lregister{
-    font-size: 14px;
+    font-size: 18px;
+    font-family: "Dancing Script", cursive !important;
     width: 100%;
     padding: 10px;
     text-align: center;

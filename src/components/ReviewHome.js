@@ -28,7 +28,7 @@ function ReviewHome() {
     <div className="review-container">
       <div className="review-header">
         <span>Review From Our Otaku's</span>
-        <Rating value={5} size="small" readOnly />
+        <Rating style={{ color: "rgb(219, 102, 102)" }} value={5} size="small" readOnly />
         <strong>from {reviewLength} reviews</strong>
       </div>
       <div className="allreviewscotainer">

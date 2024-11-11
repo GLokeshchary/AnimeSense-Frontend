@@ -16,7 +16,7 @@ function Footer() {
     <div className="foot-wrapper">
       <div className="foot-top">
         <div className="location">
-          <div className="l-header">LOCATION</div>
+          <div className="l-header">Location</div>
           <div className="l-context">
             16-21-178 Vishal Nagar Kuktapally Hyderabad Telanagana 500012
           </div>
@@ -46,7 +46,7 @@ function Footer() {
           </div>
         </div>
         <div className="information">
-          <div className="l-header">INFORMATION</div>
+          <div className="l-header">Information</div>
           <div className="el-link">
             <div>Our Story</div>
             <div>Contact Us</div>
@@ -54,7 +54,7 @@ function Footer() {
           </div>
         </div>
         <div className="side-links">
-          <div className="l-header">SIDE LINKS</div>
+          <div className="l-header">Side Links</div>
           <div className="el-link">
             {apparelsList.map((item) => (
               <div key={item}>
@@ -64,7 +64,7 @@ function Footer() {
           </div>
         </div>
         <div className="newsletter">
-          <div className="l-header">NEWS LETTER</div>
+          <div className="l-header">News Letter</div>
           <div>
             <Button variant="contained" color="error">
               SUBSCRIBE

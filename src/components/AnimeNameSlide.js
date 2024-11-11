@@ -9,17 +9,8 @@ function AnimeNameSlide() {
     <>
       <div className="name-wrapper">
         <div className="header">Pick Your Poison</div>
-        {/* <div className="animename">
-        {shopByAnime.map((item, id) => (
-          <Link to={"/products/" + item.name} key={id}>
-            <div className="anime-logo">
-              <img src={item.banner} alt={id} />
-            </div>
-          </Link>
-        ))}
-       
-      </div> */}
       </div>
+      <div></div>
       <AnimeNameSlider />
     </>
   );

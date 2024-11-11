@@ -83,7 +83,7 @@ function LoginForm() {
     <div className="wrapper">
       <div className="form-wrapper">
         <div>
-          <h2>LOG IN</h2>
+          <h2>Log In</h2>
         </div>
         <Formik
           initialValues={initialLoginValues}
@@ -141,12 +141,6 @@ function LoginForm() {
                 component={TextError}
               />
               <Box height={15} />
-              <div className="remember-me">
-                <div className="remeber">
-                  <input type="checkbox" />
-                  <span className="text">Remember Me</span>
-                </div>
-              </div>
               <Box height={20} />
               <Button
                 type="submit"
@@ -158,9 +152,9 @@ function LoginForm() {
               </Button>
               <div className="lregister">
                 <span>
-                  NEW USER |{" "}
+                  New User |{" "}
                   <Link to="/register">
-                    <span className="loginregister">REGISTER</span>
+                    <span className="loginregister">Register</span>
                   </Link>
                 </span>
               </div>

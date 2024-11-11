@@ -30,7 +30,7 @@ function HomePage() {
       <MostInDemand />
       <NewlyLaunched name="Trending" limit={10} />
       <AnimeNameSlide />
-      <TrustCard />
+      {/* <TrustCard /> */}
       <ReviewHome />
     </div>
   );

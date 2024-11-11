@@ -1,40 +1,59 @@
-.foot-wrapper{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+.foot-wrapper {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(198, 188, 176);
+  padding: 25px;
+}
+.foot-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: Poppins;
+  font-size: 15px;
+}
+.foot-top .location{
     display: flex;
     flex-direction: column;
-    background-color: rgb(198, 188, 176);
-    padding: 25px;
-    
-}
-.foot-top{
-    display: flex;
-    justify-content: space-evenly;
-    font-family: Poppins;
-    font-size: 15px;
-}
-.l-header{
-    color: red;
-    -webkit-text-stroke: 0.5px rgb(234, 225, 225);
-    font-weight: 550;
-}
-.social-icons{
-    display: flex;
-    gap: 30px;
-}
-.el-link div:hover{
-    cursor: pointer;
-    font-weight: 900;
-    border-bottom: solid 2px rgb(232, 84, 84);
-}
-span{
-    font-weight: 900;
-}
-.foot-bottom{
-    display: flex;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
-    font-family: Poppins;
-    font-size: 15px;
+    justify-content: center;
 }
-.paytmm img{
-    height: 50px;
+.l-header {
+  color: red;
+  font-size: 23px;
+  font-family: "Dancing Script", cursive !important;  font-weight: 550;
+}
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
+.el-link div:hover {
+  cursor: pointer;
+  border-bottom: solid 2px rgb(232, 84, 84);
+}
+span {
+  font-weight: 900;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;   align-items: center;
+}
+.foot-bottom {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ 
+  font-family: "Dancing Script";
+  font-size: 15px;
+}
+.foot-bottom .copyright{
+    font-size: 20px;
+}
+.paytmm img {
+  height: 50px;
 }
