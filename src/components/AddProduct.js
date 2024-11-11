@@ -7,6 +7,7 @@ import TextError from "./TextError";
 import axios from "axios";
 import ToastMessage from "./ToastMessage";
 import { useSelector } from "react-redux";
+import { URI } from "../apis/apicalls";
 const initialAddProduct = {
   productName: "",
   productCategory: "",
@@ -122,11 +123,7 @@ function AddProduct() {
     //   },
     // };
     axios
-      .post(
-        "https://anime-sense-backend-production.up.railway.app/product/save/" +
-          userId,
-        values
-      )
+      .post(URI + "/product/save/" + userId, values)
       .then((response) => {
         if (response.data.message === "Product Has Been Saved in DB") {
           ToastMessage({ type: "success", message: "Successfully Added" });

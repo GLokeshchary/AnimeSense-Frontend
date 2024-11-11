@@ -19,6 +19,7 @@ import ReviewById from "./ReviewById";
 import NewlyLaunched from "./NewlyLaunched";
 import Loading from "./Loading";
 import Swal from "sweetalert2";
+import { URI } from "../apis/apicalls";
 
 const sizes = ["S", "M", "L", "XL", "XXL"];
 const shoeSizes = ["7", "8", "9", "10", "11"];
@@ -59,7 +60,7 @@ function SingleProduct() {
   useEffect(() => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/product/" +
+        URI+"/product/" +
           productId
       )
       .then((response) => {
@@ -69,7 +70,7 @@ function SingleProduct() {
       .catch((error) => console.log(error));
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/reviews/" +
+        URI+"/reviews/" +
           productId
       )
       .then((response) => {

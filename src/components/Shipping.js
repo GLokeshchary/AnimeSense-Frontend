@@ -9,6 +9,7 @@ import Payment from "./Payment";
 import Swal from "sweetalert2";
 import { logout } from "../redux/slice/userSlice";
 import { useNavigate } from "react-router-dom";
+import { URI } from "../apis/apicalls";
 
 function Shipping() {
   const [loading, setloading] = useState(false);
@@ -68,7 +69,7 @@ function Shipping() {
         };
         axios
           .post(
-            "https://anime-sense-backend-production.up.railway.app/orders/create/" +
+            URI+"/orders/create/" +
               user.userId,
             orderrequest,
             {

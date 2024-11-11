@@ -2,17 +2,16 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import "./AdminCustomers.css";
+import { URI } from "../apis/apicalls";
 function AdminCustomers() {
   const [loading, setloading] = useState(true);
   const [users, setusers] = useState([]);
   document.title = "Admin/Customers";
   const fetchAllUsers = () => {
-    axios
-      .get("https://anime-sense-backend-production.up.railway.app/auth/all")
-      .then((response) => {
-        setusers(response.data);
-        setloading(false);
-      });
+    axios.get(URI + "/auth/all").then((response) => {
+      setusers(response.data);
+      setloading(false);
+    });
   };
   useEffect(() => {
     fetchAllUsers();

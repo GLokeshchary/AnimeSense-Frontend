@@ -1,20 +1,26 @@
-import React, { useEffect, useState } from "react";
-import PersonIcon from "@mui/icons-material/Person";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import React, { useEffect, useRef, useState } from "react";
 import "./NavBar.css";
 import axios from "axios";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
-import DropDownNavBar from "./DropDownNavBar";
-import Badge from "@mui/material/Badge";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+//icons import
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+//components
 import SearchProducts from "./SearchProducts";
 import DropDownUser from "./DropDownUser";
+import DropDownNavBar from "./DropDownNavBar";
+import WishListInNavBar from "./WishListInNavBar";
+import CartInNavBar from "./CartInNavBar";
 
 function NavBar() {
   const [currLocation, setcurrLocation] = useState({});
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [smallScreenTabs, setSmallScreenTabs] = useState(
+    window.innerWidth <= 768
+  );
+  const navbarRef = useRef(null);
   const user = useSelector((state) => state.user.user) || {};
   const AdminLoggedin =
     useSelector((state) => state.user.AdminLoggedIn) || false;
@@ -27,6 +33,23 @@ function NavBar() {
       .then((response) => setcurrLocation(response.data))
       .catch((error) => console.log(error));
   }, []);
+  useEffect(() => {
+    // Set smallScreenTabs based on window resize
+    const handleResize = () => {
+      setSmallScreenTabs(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setMenuOpen(false); // Close the menu
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [smallScreenTabs]);
 
   const getTotalQuantity = () => {
     let total = 0;
@@ -35,65 +58,80 @@ function NavBar() {
     });
     return total;
   };
-
   return (
     <>
-      <div className="navbar-container">
-        <div className="nav-middle">
+      <div ref={navbarRef} className="navbar-container">
+        <div className="nav-logo">
           <Link to="/">
-            <div className="logo">ANIME SENSE</div>
+            <div className="logo">Anime Sense</div>
           </Link>
         </div>
-        <div className="nav-left">
-          <NavLink to="/">
-            <div className="left-tabs">HOME</div>
-          </NavLink>
-          <div className="left-tabs">
-            <DropDownNavBar name="SHOP BY PRODUCT " />
-            <ArrowDropDownIcon />
-          </div>
-          <div className="left-tabs">
-            <DropDownNavBar type="anime" name="SHOP BY ANIME " />
-            <ArrowDropDownIcon />
-          </div>
-          <Link to={"/products/" + "Combos"}>
-            <div className="left-tabs">COMBOS</div>
-          </Link>
-        </div>
-
-        <div className="nav-right">
-          {AdminLoggedin && (
-            <Link to="/admin">
-              <div className="right-tabs">ADMIN</div>
-            </Link>
-          )}
-          <div className="right-tabs">
+        {smallScreenTabs && (
+          <div className="nav-small">
             <SearchProducts />
-          </div>
-          <div className="right-tabs">
             <DropDownUser />
+            <Link to="/wishlist">
+              <WishListInNavBar wishlistItems={wishlistItems} />
+            </Link>
+            <NavLink to="/cart">
+              <CartInNavBar totalQuantity={getTotalQuantity() || 0} />
+            </NavLink>
           </div>
-          <Link to="/wishlist">
-            <div className="right-tabs">
-              <Badge badgeContent={wishlistItems.length} max={9} color="error">
-                <FavoriteBorderIcon className="fheart" />
-              </Badge>
+        )}
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <CloseIcon /> : <MenuIcon />}
+        </div>
+        <div className={`mainnav-right ${menuOpen ? "active" : ""}`}>
+          <div className="nav-left">
+            <NavLink to="/">
+              <div className="left-tabs">HOME</div>
+            </NavLink>
+            <div className="left-tabs">
+              <DropDownNavBar name="SHOP BY PRODUCT " />
             </div>
-          </Link>
-          <NavLink to="/cart">
-            <div className="right-tabs">
-              <Badge
-                badgeContent={getTotalQuantity() || 0}
-                max={9}
-                color="error"
-              >
-                <ShoppingCartOutlinedIcon />
-              </Badge>
+            <div className="left-tabs">
+              <DropDownNavBar type="anime" name="SHOP BY ANIME " />
             </div>
-          </NavLink>
-          {currLocation !== null ? (
-            <div className="right-tabs">{currLocation.city}</div>
-          ) : null}
+            <Link to={"/products/" + "Combos"}>
+              <div className="left-tabs">COMBOS</div>
+            </Link>
+          </div>
+
+          <div className="nav-right">
+            {AdminLoggedin && (
+              <Link to="/admin">
+                <div className="right-tabs">ADMIN</div>
+              </Link>
+            )}
+            {menuOpen ? (
+              ""
+            ) : (
+              <>
+                <div className="right-tabs">
+                  <SearchProducts />
+                </div>
+                <div className="right-tabs">
+                  <DropDownUser />
+                </div>
+                <Link to="/wishlist">
+                  <div className="right-tabs">
+                    <WishListInNavBar wishlistItems={wishlistItems} />
+                  </div>
+                </Link>
+                <NavLink to="/cart">
+                  <div className="right-tabs">
+                    <CartInNavBar totalQuantity={getTotalQuantity() || 0} />
+                  </div>
+                </NavLink>
+              </>
+            )}
+            {currLocation !== null ? (
+              <div className="right-tabs">
+                <LocationOnIcon />
+                <span className="location"> {currLocation.city}</span>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </>

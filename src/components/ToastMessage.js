@@ -15,13 +15,18 @@ const ToastMessage = ({ type, message, image }) => {
       toast.error(message, toastOptions);
       break;
     case "info":
-      toast.info(
-        <div className="toastwish">
-          <img src={image} alt="Custom Image" />
-          <span>{message}</span>
-        </div>,
-        toastOptions
-      );
+      toast.info(message, toastOptions);
+      break;
+    case "top-center":
+      toast.success(message, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: "colored",
+      });
       break;
     default:
       toast(message, toastOptions);

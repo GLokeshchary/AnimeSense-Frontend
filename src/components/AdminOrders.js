@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "./AdminOrders.css";
 import Modal from "@mui/material/Modal";
 import { Box } from "@mui/material";
+import { URI } from "../apis/apicalls";
 function AdminOrders() {
   const [loading, setloading] = useState(true);
   const [selectedValue, setSelectedValue] = useState();
@@ -39,7 +40,7 @@ function AdminOrders() {
   const fetchOrders = () => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/orders/allOrders",
+        URI+"/orders/allOrders",
         {
           headers: {
             Authorization: "Bearer " + user.jwtToken,
@@ -79,7 +80,7 @@ function AdminOrders() {
   const updateStatus = () => {
     axios
       .post(
-        "https://anime-sense-backend-production.up.railway.app/orders/status/" +
+        URI+"/orders/status/" +
           orderID,
         selectedValue,
         {

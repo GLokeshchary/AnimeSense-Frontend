@@ -14,6 +14,7 @@ import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
 import { addUser } from "../redux/slice/userSlice";
 import Loading from "./Loading";
+import { URI } from "../apis/apicalls";
 
 const initialLoginValues = {
   username: "",
@@ -38,45 +39,41 @@ function LoginForm() {
       username: values.username,
       password: values.password,
     };
-    axios
-      .post(
-        "https://anime-sense-backend-production.up.railway.app/auth/authenticate",
-        authRequest
-      )
-      .then((response) => {
-        if (
-          response.data.loginMessage === "Logged In Successfully" &&
-          response.data.jwtToken !== null
-        ) {
-          dispatch(addUser(response.data));
-          setloading(false);
-          formikHelpers.resetForm();
-          ToastMessage({
-            type: "info",
-            image:
-              "https://i.pinimg.com/originals/53/61/a7/5361a7115f1dedb3c8f01a3dcf45bb30.gif",
-            message: `LoggedIn SucessFully`,
-          });
-          navigate("/");
-        } else if (
-          response.data.loginMessage === "Invalid Username" &&
-          response.data.jwtToken === null
-        ) {
-          setloading(false);
-          ToastMessage({
-            type: "info",
-            image: "https://media.tenor.com/Ya4dusE_LZ0AAAAC/anime-stress.gif",
-            message: `${response.data.loginMessage}`,
-          });
-        } else {
-          setloading(false);
-          ToastMessage({
-            type: "info",
-            image: "https://media.tenor.com/Ya4dusE_LZ0AAAAC/anime-stress.gif",
-            message: `${response.data.loginMessage}`,
-          });
-        }
-      });
+    axios.post(URI + "/auth/authenticate", authRequest).then((response) => {
+      if (
+        response.data.loginMessage === "Logged In Successfully" &&
+        response.data.jwtToken !== null
+      ) {
+        dispatch(addUser(response.data));
+        setloading(false);
+        formikHelpers.resetForm();
+        ToastMessage({
+          type: "top-center",
+          message: `LoggedIn SucessFully`,
+        });
+        navigate("/");
+      }
+       else if (
+        response.data.loginMessage === "Invalid Username" &&
+        response.data.jwtToken === null
+      ) {
+        setloading(false);
+        ToastMessage({
+          type: "error",
+          message: `${response.data.loginMessage}`,
+        });
+      }
+      else if(
+        response.data.loginMessage === "Invalid Password" &&
+        response.data.jwtToken === null
+      ){
+        setloading(false);
+        ToastMessage({
+          type: "error",
+          message: `${response.data.loginMessage}`,
+        });
+      }
+    });
   };
   if (loading) {
     return <Loading />;

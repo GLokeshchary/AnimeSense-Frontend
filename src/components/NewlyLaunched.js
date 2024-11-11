@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Card from "../components/Card";
 import Loading from "./Loading";
+import { URI } from "../apis/apicalls";
 function NewlyLaunched(props) {
   const [products, setproducts] = useState(null);
   const [loading, setloading] = useState(true);
@@ -19,34 +20,32 @@ function NewlyLaunched(props) {
   const token = user.jwtToken;
   const { name, limit, similar, ProductName } = props;
   useEffect(() => {
-    axios
-      .get("https://anime-sense-backend-production.up.railway.app/product/all")
-      .then((response) => {
-        if (name === "TRENDING") {
-          const filterproducts = response.data.filter((product) =>
-            product.productSpecification.includes("Popular")
-          );
-          const limitedproducts = filterproducts.slice(0, limit);
-          setproducts(limitedproducts);
-          setloading(false);
-        } else if (similar && name === "RELATED PRODUCTS") {
-          const similarProducts = response.data.filter(
-            (product) =>
-              product.productCategory === similar &&
-              product.productName !== ProductName
-          );
-          const limitedproducts = similarProducts.slice(0, limit);
-          setproducts(limitedproducts);
-          setloading(false);
-        } else {
-          const filterproducts = response.data.filter((product) =>
-            product.productSpecification.includes("New Arrival")
-          );
-          const limitedproducts = filterproducts.slice(0, limit);
-          setproducts(limitedproducts);
-          setloading(false);
-        }
-      });
+    axios.get(URI + "/product/all").then((response) => {
+      if (name === "TRENDING") {
+        const filterproducts = response.data.filter((product) =>
+          product.productSpecification.includes("Popular")
+        );
+        const limitedproducts = filterproducts.slice(0, limit);
+        setproducts(limitedproducts);
+        setloading(false);
+      } else if (similar && name === "RELATED PRODUCTS") {
+        const similarProducts = response.data.filter(
+          (product) =>
+            product.productCategory === similar &&
+            product.productName !== ProductName
+        );
+        const limitedproducts = similarProducts.slice(0, limit);
+        setproducts(limitedproducts);
+        setloading(false);
+      } else {
+        const filterproducts = response.data.filter((product) =>
+          product.productSpecification.includes("New Arrival")
+        );
+        const limitedproducts = filterproducts.slice(0, limit);
+        setproducts(limitedproducts);
+        setloading(false);
+      }
+    });
   }, [limit, name, token, similar, ProductName]);
 
   if (!products) return null;

@@ -7,6 +7,7 @@ import axios from "axios";
 import Loading from "./Loading";
 import Payment from "./Payment";
 import { Box, Divider } from "@mui/material";
+import { URI } from "../apis/apicalls";
 
 function BuyNowShipping() {
   const [loading, setloading] = useState(false);
@@ -66,7 +67,7 @@ function BuyNowShipping() {
         // };
         axios
           .post(
-            "https://anime-sense-backend-production.up.railway.app/orders/create/" +
+            URI+"/orders/create/" +
               user.userId,
             orderrequest,
             {

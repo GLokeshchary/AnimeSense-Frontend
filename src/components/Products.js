@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import ProductsList from "./ProductsList";
 import axios from "axios";
 import Loading from "./Loading";
+import { URI } from "../apis/apicalls";
 const colors = ["Red", "Blue", "Green", "Yellow", "Orange", "Black", "Purple"];
 const categories = [
   "Hoodies",
@@ -44,7 +45,7 @@ function Products() {
     if (isAnime) {
       axios
         .get(
-          "https://anime-sense-backend-production.up.railway.app/product/anime/" +
+          URI+"/product/anime/" +
             name
         )
         .then((response) => {
@@ -56,7 +57,7 @@ function Products() {
 
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/product/category/" +
+        URI+"/product/category/" +
           name
       )
       .then((response) => {

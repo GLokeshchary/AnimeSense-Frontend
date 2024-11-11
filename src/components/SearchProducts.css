@@ -1,6 +1,10 @@
 .search-contaier{
     width: 100%;
 }
+.modal-container{
+  width: 100vw;
+
+}
 .next{
     position: absolute;
     background-color: white;
@@ -49,7 +53,7 @@
     padding: 10px;
 }
 .searchlist{
-    width: 1400px;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -75,4 +79,46 @@
 }
 .searchimput{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+.search-logo{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.next{
+  width: 100%;
+}
+}
+@media (max-width: 480px) {
+  .search-logo{
+      display: flex;
+      align-items: center;
+      justify-content: right;
+  }
+  .next{
+  width: 100%;
+  padding: 30px 30px;
+}
+.next .ppppp{
+  width: 95%;
+  display: flex;
+  gap:100px;
+  justify-content: center;
+  align-items: center;
+}
+.next input{
+  width: 87%;
+  
+}
+.searchlist{
+  width: 70%;
+  margin: 10px;
+}
+  }

@@ -8,6 +8,7 @@ import { Badge } from "@mui/material";
 import "./Orders.css";
 import Swal from "sweetalert2";
 import EmptyCart from "./EmptyCart";
+import { URI } from "../apis/apicalls";
 function Orders() {
   const [loading, setloading] = useState(true);
   const [orders, setorders] = useState([]);
@@ -18,7 +19,7 @@ function Orders() {
   useEffect(() => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/orders/all/" +
+        URI+"/orders/all/" +
           user.userId,
         {
           headers: {

@@ -7,6 +7,7 @@ import Modal from "@mui/material/Modal";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import { URI } from "../apis/apicalls";
 
 function SearchProducts() {
   const [open, setOpen] = useState(false);
@@ -15,7 +16,7 @@ function SearchProducts() {
   const [products, setproducts] = useState([]);
   useEffect(() => {
     axios
-      .get("https://anime-sense-backend-production.up.railway.app/product/all")
+      .get(URI + "/product/all")
       .then((response) => {
         setproducts(response.data);
         setloading(false);
@@ -35,16 +36,18 @@ function SearchProducts() {
   }
   return (
     <div className="search-contaier">
-      <div onClick={handleOpen}>
+      <div className="search-logo" onClick={handleOpen}>
         <SearchIcon />
       </div>
-      <Modal open={open} onClose={handleClose}>
+      <Modal className="modal-container" open={open} onClose={handleClose}>
         <div className="next">
           <div className="ppppp">
             <span className="head">What are you looking for?</span>
-            <button onClick={handleClose}>
-              <CancelIcon />
-            </button>
+            <span>
+              <button onClick={handleClose}>
+                <CancelIcon />
+              </button>
+            </span>
           </div>
           <div className="searchimput">
             <input

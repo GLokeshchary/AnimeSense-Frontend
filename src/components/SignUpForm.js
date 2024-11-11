@@ -12,6 +12,7 @@ import "./SignUpForm.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { URI } from "../apis/apicalls";
 const intialSignUpValues = {
   firstName: "",
   lastName: "",
@@ -62,7 +63,7 @@ function SignUpForm() {
     };
     axios
       .post(
-        "https://anime-sense-backend-production.up.railway.app/auth/register",
+        URI+"/auth/register",
         RegisterRequest
       )
       .then((response) => {

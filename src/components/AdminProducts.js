@@ -18,6 +18,7 @@ import {
 } from "./AddProduct";
 import { Form, Formik } from "formik";
 import FormikControl from "./FormikControl";
+import { URI } from "../apis/apicalls";
 
 const style = {
   position: "absolute",
@@ -64,15 +65,13 @@ function AdminProducts() {
   const endIndex = startIndex + itemsPerPage;
   const paginatedProducts = products.slice(startIndex, endIndex);
   const fetchAllProducts = () => {
-    axios
-      .get("https://anime-sense-backend-production.up.railway.app/product/all")
-      .then((response) => {
-        const filterproductsbytime = response.data
-          .slice()
-          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-        setproducts(filterproductsbytime);
-        setloading(false);
-      });
+    axios.get(URI + "/product/all").then((response) => {
+      const filterproductsbytime = response.data
+        .slice()
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      setproducts(filterproductsbytime);
+      setloading(false);
+    });
   };
   useEffect(() => {
     fetchAllProducts();
@@ -106,7 +105,7 @@ function AdminProducts() {
     setopen(false);
     axios
       .post(
-        "https://anime-sense-backend-production.up.railway.app/product/update/" +
+        URI+"/product/update/" +
           modalproduct.productId,
         values
       )

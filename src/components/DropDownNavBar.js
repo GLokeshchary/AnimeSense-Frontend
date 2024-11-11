@@ -1,6 +1,7 @@
 import React from "react";
 import "./DropDownNavBar.css";
 import { Link } from "react-router-dom";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const apparelsList = [
   "T-Shirts",
@@ -25,20 +26,14 @@ function DropDownNavBar({ name, type }) {
     <>
       <div className="dropdown">
         <button className="dropbtn">
-          <div className="animestyel">{name}</div>
+          <div className="animestyel">{name}<ArrowDropDownIcon /></div>
         </button>
         <div className="dropdown-content">
           {type === "anime" ? (
             <>
-              <div className="heading-image">
-                <img
-                  src="https://www.pngmart.com/files/21/Anime-Male-PNG-Isolated-Pic.png"
-                  alt="Gojo Satoru.jpg"
-                />
-              </div>
               <div className="animelist">
-                <span className="heading">Anime Name</span>
-                <ul className="animenamelist">
+                <span className="heading">Anime Names</span>
+                <ul className="dropdown-list">
                   {animeNameList.map((item, id) => (
                     <Link key={id} to={"/products/" + item}>
                       <li>{item}</li>
@@ -49,12 +44,6 @@ function DropDownNavBar({ name, type }) {
             </>
           ) : (
             <>
-              <div className="heading-image">
-                <img
-                  src="https://www.pngmart.com/files/13/Luffy-PNG-Image.png"
-                  alt="luffy.jpeg"
-                />
-              </div>
               <div className="dropdown-left">
                 <div className="dropdown-head">
                   <span>APPARELS</span>

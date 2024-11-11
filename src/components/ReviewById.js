@@ -7,6 +7,7 @@ import "./ReviewById.css";
 import axios from "axios";
 import ToastMessage from "./ToastMessage";
 import Loading from "./Loading";
+import { URI } from "../apis/apicalls";
 const initalreviewvalues = {
   reviewerName: "",
   email: "",
@@ -29,7 +30,7 @@ function ReviewById({ productId }) {
   const fetchReviews = () => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/reviews/" +
+        URI+"/reviews/" +
           productId
       )
       .then((response) => {
@@ -59,7 +60,7 @@ function ReviewById({ productId }) {
     setLoading(true);
     axios
       .post(
-        "https://anime-sense-backend-production.up.railway.app/reviews/save/" +
+        URI+"/reviews/save/" +
           productId,
         values
       )

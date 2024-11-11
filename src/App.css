@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-@font-face {
-    font-family: onepiece;
-    src: url(./fonts/one-piece-3/OnePiece-zAqL.ttf);
+:root {
+    --primary-color: #f35555; /* Example primary color */
+    --secondary-color: #f1a1a1; /* Example secondary color */
+  }
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
 }

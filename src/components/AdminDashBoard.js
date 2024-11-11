@@ -8,6 +8,7 @@ import { logout } from "../redux/slice/userSlice";
 import { useNavigate } from "react-router-dom";
 import EmptyCart from "./EmptyCart";
 import OrdersChart from "./OrdersChart";
+import { URI } from "../apis/apicalls";
 function AdminDashBoard() {
   const [loading, setloading] = useState(true);
   const [orders, setorders] = useState([]);
@@ -18,14 +19,11 @@ function AdminDashBoard() {
   const user = useSelector((state) => state.user.user) || {};
   const fetchOrders = () => {
     axios
-      .get(
-        "https://anime-sense-backend-production.up.railway.app/orders/allOrders",
-        {
-          headers: {
-            Authorization: "Bearer " + user.jwtToken,
-          },
-        }
-      )
+      .get(URI + "/orders/allOrders", {
+        headers: {
+          Authorization: "Bearer " + user.jwtToken,
+        },
+      })
       .then((response) => {
         const filterorders = response.data
           .slice()
@@ -50,7 +48,7 @@ function AdminDashBoard() {
   const fetchOrdersByDate = () => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/orders/chart",
+        URI+"/orders/chart",
         {
           headers: {
             Authorization: "Bearer " + user.jwtToken,
@@ -77,7 +75,7 @@ function AdminDashBoard() {
   };
   const fetchAllUsers = () => {
     axios
-      .get("https://anime-sense-backend-production.up.railway.app/auth/all")
+      .get(URI+"/auth/all")
       .then((response) => {
         setusers(response.data);
         setloading(false);

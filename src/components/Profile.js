@@ -13,6 +13,7 @@ import axios from "axios";
 import "./Profile.css";
 import Swal from "sweetalert2";
 import Loading from "./Loading";
+import { URI } from "../apis/apicalls";
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -38,7 +39,7 @@ function Profile() {
   const fetchUserById = () => {
     axios
       .get(
-        "https://anime-sense-backend-production.up.railway.app/auth/user/" +
+        URI+"/auth/user/" +
           user.userId
       )
       .then((response) => {
@@ -73,7 +74,7 @@ function Profile() {
     console.log(values);
     axios
       .post(
-        "https://anime-sense-backend-production.up.railway.app/auth/updateUser/" +
+        URI+"/auth/updateUser/" +
           user.userId,
         values
       )

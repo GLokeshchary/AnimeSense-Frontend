@@ -2,6 +2,7 @@ import { Pagination, Rating } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./ReviewHome.css";
 import axios from "axios";
+import { URI } from "../apis/apicalls";
 function ReviewHome() {
   const [reviews, setreviews] = useState([]);
   const [page, setPage] = useState(1);
@@ -15,7 +16,7 @@ function ReviewHome() {
   const paginatedReviews = reviews.slice(startIndex, endIndex);
   useEffect(() => {
     axios
-      .get("https://anime-sense-backend-production.up.railway.app/reviews/all")
+      .get(URI+"/reviews/all")
       .then((response) => {
         setreviewLength(response.data.length);
         setreviews(response.data);

@@ -1,6 +1,6 @@
 import React from "react";
 import "./DropDownUser.css";
-
+import { toast } from "react-toastify";
 import PersonIcon from "@mui/icons-material/Person";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,11 +13,15 @@ function DropDownUser() {
   const user = useSelector((state) => state.user.user) || {};
   const handleLogout = () => {
     disptach(logout());
-    Swal.fire({
-      icon: "success",
-      title: "Successfully Logged Out!",
-      showConfirmButton: true,
-    });
+      toast.success("Successfully Logged Out!", {
+        position: "top-center",           
+        autoClose: 3000,                  
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: "colored",                 
+      });
     navigate("/");
   };
   return (
@@ -33,7 +37,7 @@ function DropDownUser() {
                 <button>LOGIN</button>
               </Link>
               <p>
-                NEW USER ? <Link to="/register">REGISTER HERE</Link>
+                NEW USER ? <Link to="/register"><span>REGISTER</span></Link>
               </p>
             </div>
           ) : (
